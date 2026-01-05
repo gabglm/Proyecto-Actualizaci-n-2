@@ -255,3 +255,27 @@ END:VCALENDAR`;
   activarAnimaciones();
 
 })();
+
+(function () {
+  const btn = document.getElementById('btnTema');
+  if (!btn) return;
+
+  const key = 'tema';
+
+  // 1) Al cargar: usa lo guardado si existe; si no, deja el que ya trae el body (dark por defecto)
+  const saved = localStorage.getItem(key);
+  if (saved === 'light' || saved === 'dark') {
+    document.body.setAttribute('data-theme', saved);
+  } else if (!document.body.getAttribute('data-theme')) {
+    document.body.setAttribute('data-theme', 'dark');
+  }
+
+  // 2) Al click: alterna con base en el atributo real
+  btn.addEventListener('click', () => {
+    const current = document.body.getAttribute('data-theme') || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.body.setAttribute('data-theme', next);
+    localStorage.setItem(key, next);
+  });
+})();
+
