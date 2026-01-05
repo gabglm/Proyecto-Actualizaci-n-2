@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "titulo": "Conferencia de Software",
+    "descripcion": "Tendencias actuales en desarrollo web, arquitectura limpia y buenas prácticas para proyectos en equipo.",
+    "fecha": "2026-03-15",
+    "hora": "12:00",
+    "lugar": "Auditorio ESCOM",
+    "categoria": "Conferencia",
+    "organiza": "Academia TDAW",
+    "cupo": 250,
+    "costo": "Gratis"
+  },
+  {
+    "id": 2,
+    "titulo": "Taller de Git y GitHub",
+    "descripcion": "Aprende ramas, pull requests, revisión de código y flujo de trabajo para evitar conflictos en equipo.",
+    "fecha": "2026-03-20",
+    "hora": "10:00",
+    "lugar": "Laboratorio 3",
+    "categoria": "Taller",
+    "organiza": "Comunidad Dev ESCOM",
+    "cupo": 40,
+    "costo": "Gratis"
+  },
+  {
+    "id": 3,
+    "titulo": "Hackathon ESCOM",
+    "descripcion": "8 horas para construir un prototipo funcional por equipos. Presentación final con jurado y premios.",
+    "fecha": "2026-04-02",
+    "hora": "09:00",
+    "lugar": "Laboratorio 1",
+    "categoria": "Concurso",
+    "organiza": "Innovación ESCOM",
+    "cupo": 120,
+    "costo": "Gratis"
+  },
+  {
+    "id": 4,
+    "titulo": "Feria de Proyectos",
+    "descripcion": "Exposición de proyectos estudiantiles: demos, pósters y networking. Lleva tu laptop para presentar.",
+    "fecha": "2026-03-25",
+    "hora": "09:00",
+    "lugar": "Explanada",
+    "categoria": "Feria",
+    "organiza": "ESCOM",
+    "cupo": 500,
+    "costo": "Gratis"
+  },
+  {
+    "id": 5,
+    "titulo": "Charla: Ciberseguridad para Desarrolladores",
+    "descripcion": "Riesgos comunes en aplicaciones web, OWASP Top 10 y recomendaciones prácticas para proteger proyectos.",
+    "fecha": "2026-03-28",
+    "hora": "13:00",
+    "lugar": "Sala Audiovisual",
+    "categoria": "Charla",
+    "organiza": "Seguridad Informática",
+    "cupo": 150,
+    "costo": "Gratis"
+  },
+  {
+    "id": 6,
+    "titulo": "Workshop: UI Minimalista con CSS",
+    "descripcion": "Diseño limpio, componentes reutilizables y tips para lograr interfaces modernas sin frameworks pesados.",
+    "fecha": "2026-04-05",
+    "hora": "11:00",
+    "lugar": "Laboratorio 2",
+    "categoria": "Workshop",
+    "organiza": "Diseño y UX",
+    "cupo": 35,
+    "costo": "Gratis"
+  },
+  {
+    "id": 7,
+    "titulo": "Taller: APIs REST con PHP",
+    "descripcion": "Estructura básica, endpoints, validaciones y consumo desde el frontend. Enfoque práctico con ejemplos.",
+    "fecha": "2026-04-09",
+    "hora": "12:30",
+    "lugar": "Laboratorio 4",
+    "categoria": "Taller",
+    "organiza": "Backend ESCOM",
+    "cupo": 40,
+    "costo": "Gratis"
+  },
+  {
+    "id": 8,
+    "titulo": "Mesa Redonda: Empleo en TI",
+    "descripcion": "Consejos de CV, portafolio, entrevistas técnicas y cómo buscar tu primera oportunidad en desarrollo.",
+    "fecha": "2026-04-12",
+    "hora": "16:00",
+    "lugar": "Auditorio ESCOM",
+    "categoria": "Panel",
+    "organiza": "Vinculación",
+    "cupo": 250,
+    "costo": "Gratis"
+  },
+  {
+    "id": 9,
+    "titulo": "Sesión: Preparación para Entrevistas Técnicas",
+    "descripcion": "Estrategias, práctica con preguntas típicas y simulación breve de entrevista con retroalimentación.",
+    "fecha": "2026-04-16",
+    "hora": "14:00",
+    "lugar": "Sala 2",
+    "categoria": "Sesión",
+    "organiza": "Comunidad Dev ESCOM",
+    "cupo": 60,
+    "costo": "Gratis"
+  },
+  {
+    "id": 10,
+    "titulo": "Networking: Comunidad de Desarrollo ESCOM",
+    "descripcion": "Conecta con otros estudiantes, comparte proyectos y conoce oportunidades de colaboración y concursos.",
+    "fecha": "2026-04-19",
+    "hora": "17:30",
+    "lugar": "Cafetería",
+    "categoria": "Networking",
+    "organiza": "Comunidad Dev ESCOM",
+    "cupo": 120,
+    "costo": "Gratis"
+  }
+]

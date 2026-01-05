@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "nombre": "Test User",
+        "correo": "test@gmail.com",
+        "password_hash": "$2y$10$SHE3pWgtN4DqzEvDHjOshenLFaGC\/9hkizFHW.nog.R.wjkqEPJd2",
+        "rol": "estudiante",
+        "intereses": [
+            "IA",
+            "eventos"
+        ],
+        "created_at": "2026-01-04 15:34:40",
+        "updated_at": "2026-01-04 15:35:07"
+    },
+    {
+        "id": 2,
+        "nombre": "Leonel Ramírez",
+        "correo": "leonrb1207@gmail.com",
+        "password_hash": "$2y$10$2yNSs3Kb8VfSWg9zL3Ts5emHssuXLuNLTSZ5rdbPMQKB8XQBqMtCe",
+        "rol": "estudiante",
+        "intereses": [],
+        "created_at": "2026-01-05 02:08:28",
+        "updated_at": "2026-01-05 02:08:28"
+    },
+    {
+        "id": 3,
+        "nombre": "Gabriel",
+        "correo": "glopezm2000@alumno.ipn.mx",
+        "password_hash": "$2y$10$JvmzrUDuYTS6KlmFDKZLMe4T7DzPTYODHbEvmMklw\/Sw4SJ3rLyV6",
+        "rol": "estudiante",
+        "intereses": [],
+        "created_at": "2026-01-05 07:04:15",
+        "updated_at": "2026-01-05 07:04:15"
+    }
+]
