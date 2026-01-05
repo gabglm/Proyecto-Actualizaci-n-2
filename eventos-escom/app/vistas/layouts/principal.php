@@ -12,17 +12,22 @@
   <link rel="stylesheet" href="assets/css/estilos.css" />
 </head>
 
-<body>
+<body data-tema="oscuro" class="vista-<?php echo htmlspecialchars($_GET['vista'] ?? 'home'); ?>">
+
+
+
 
   <!-- =========================
        HEADER / NAVBAR
        ========================= -->
   <header class="topbar">
     <div class="contenedor topbar__fila">
-      <a class="marca" href="?vista=home">
-        <span class="marca__punto" aria-hidden="true"></span>
-        <span>Eventos ESCOM</span>
-      </a>
+    <a class="marca" href="?vista=home">
+  <span class="marca__punto" aria-hidden="true">🦈</span>
+  <span class="marca__texto">Eventos ESCOM</span>
+</a>
+
+
 
      <nav class="nav">
   <a class="nav__link" href="?vista=home">Home</a>
