@@ -22,12 +22,10 @@ html,body{height:100%}
 body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  background:
-    radial-gradient(1100px 600px at 20% -10%, rgba(255,255,255,.10), transparent 60%),
-    radial-gradient(900px 500px at 85% 0%, rgba(255,255,255,.06), transparent 55%),
-    var(--fondo);
+  background: var(--fondo); /* ✅ sin radial-gradients */
   color:var(--texto);
 }
+
 
 .contenedor{width:min(1100px, calc(100% - 32px)); margin:0 auto;}
 .texto-suave{color:var(--suave);}
@@ -362,3 +360,305 @@ main.contenedor{ padding: 18px 0 90px; }
     padding: 20px;
   }
 }
+
+/* =========================
+   THEME TOKENS (azulado)
+   ========================= */
+:root{
+  --bg: #0b1020;
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.75);
+
+  --card: rgba(255,255,255,.04);
+  --cardBorder: rgba(255,255,255,.10);
+
+  --inputBg: rgba(0,0,0,.22);
+  --inputBorder: rgba(255,255,255,.12);
+
+  --brand: #2aa7ff;          /* azul */
+  --brand2: #6d5cff;         /* violeta-azul */
+  --glow: rgba(42,167,255,.18);
+
+  --dangerBg: rgba(239,68,68,.12);
+  --dangerBorder: rgba(239,68,68,.22);
+}
+
+body[data-theme="light"]{
+  --bg: #f6f8ff;
+  --text: rgba(10,12,16,.92);
+  --muted: rgba(10,12,16,.68);
+
+  --card: rgba(255,255,255,.78);
+  --cardBorder: rgba(10,12,16,.10);
+
+  --inputBg: rgba(255,255,255,.92);
+  --inputBorder: rgba(10,12,16,.12);
+
+  --glow: rgba(42,167,255,.14);
+
+  --dangerBg: rgba(239,68,68,.10);
+  --dangerBorder: rgba(239,68,68,.18);
+}
+
+/* =========================
+   AUTH (Login / Registro) — limpio y consistente
+   Usa SOLO :root y :root[data-tema="claro"]
+   ========================= */
+
+:root{
+  --azul1: #2aa7ff;
+  --azul2: #6d5cff;
+
+  --auth-card: rgba(255,255,255,.06);
+  --auth-card-borde: rgba(255,255,255,.12);
+
+  --auth-input: rgba(0,0,0,.22);
+  --auth-input-borde: rgba(255,255,255,.18);
+
+  --auth-focus: rgba(42,167,255,.22);
+}
+
+:root[data-tema="claro"]{
+  --auth-card: rgba(15,23,42,.05);
+  --auth-card-borde: rgba(15,23,42,.12);
+
+  --auth-input: rgba(255,255,255,.92);
+  --auth-input-borde: rgba(15,23,42,.16);
+
+  --auth-focus: rgba(42,167,255,.18);
+}
+
+/* Layout */
+.auth{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-items: stretch;
+  margin: 18px 0 10px;
+}
+
+@media (min-width: 900px){
+  .auth{ grid-template-columns: 1.05fr .95fr; }
+}
+
+/* Card (form) */
+.auth__card{
+  border-radius: var(--radio);
+  border: 1px solid var(--auth-card-borde);
+  background: var(--auth-card);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  box-shadow: var(--sombra);
+}
+
+.auth__chip{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(42,167,255,.16), rgba(109,92,255,.12));
+  border: 1px solid rgba(42,167,255,.28);
+  color: var(--texto);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .4px;
+}
+
+.auth__title{
+  margin: 12px 0 6px;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--texto);
+}
+
+.auth__subtitle{
+  margin: 0 0 10px;
+  color: var(--suave);
+}
+
+/* Alert */
+.auth__alert{
+  margin: 12px 0 10px;
+  padding: 12px 12px;
+  border-radius: 14px;
+  background: rgba(239,68,68,.10);
+  border: 1px solid rgba(239,68,68,.22);
+  color: var(--texto);
+}
+.auth__alert ul{ margin: 8px 0 0 18px; }
+
+/* Form */
+.auth__label{
+  display:block;
+  margin: 12px 0 6px;
+  color: var(--suave);
+  font-weight: 800;
+}
+
+.auth__input{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--auth-input-borde);
+  background: var(--auth-input);
+  color: var(--texto);
+  outline: none;
+}
+
+.auth__input::placeholder{
+  color: color-mix(in oklab, var(--texto) 55%, transparent);
+}
+
+.auth__input:focus{
+  border-color: rgba(42,167,255,.45);
+  box-shadow: 0 0 0 4px var(--auth-focus);
+}
+
+/* Buttons */
+.auth__actions{
+  display:flex;
+  gap: 12px;
+  align-items:center;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.auth__btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 11px 16px;
+  border-radius: 16px;
+  border: 0;
+  background: linear-gradient(90deg, var(--azul1), var(--azul2));
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 12px 24px rgba(42,167,255,.18);
+}
+
+.auth__btn--ghost{
+  background: transparent;
+  border: 1px solid var(--auth-card-borde);
+  color: var(--texto);
+  box-shadow: none;
+}
+
+.auth__foot{
+  margin-top: 14px;
+  color: var(--suave);
+}
+
+.auth__link{
+  color: var(--texto);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(42,167,255,.55);
+}
+.auth__link:hover{ border-bottom-style: solid; }
+
+/* Side image (líneas blancas se mantienen) */
+.auth__side{
+  position: relative;
+  border-radius: var(--radio);
+  overflow:hidden;
+  border: 1px solid var(--auth-card-borde);
+  min-height: 280px;
+}
+
+.auth__sideBg{
+  position:absolute; inset:0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.06);
+  filter: saturate(1.05) contrast(1.02);
+}
+
+/* Overlay oscuro elegante para que el texto blanco siempre se lea,
+   sin tapar las líneas blancas de la foto */
+.auth__sideOverlay{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.18), rgba(0,0,0,.70)),
+    radial-gradient(900px 380px at 20% 20%, rgba(42,167,255,.34), transparent 55%),
+    radial-gradient(900px 380px at 90% 30%, rgba(109,92,255,.28), transparent 58%);
+}
+
+.auth__sideContent{
+  position:relative;
+  padding: 18px;
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  color: #fff; /* SIEMPRE BLANCO */
+}
+
+.auth__sideTitle{
+  margin: 0 0 6px;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,.45);
+}
+
+.auth__sideText{
+  margin: 0 0 12px;
+  color: rgba(255,255,255,.86);
+  text-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+
+.auth__badges{ display:flex; gap:8px; flex-wrap:wrap; }
+.auth__badge{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.18);
+  color: rgba(255,255,255,.92);
+  font-size: 12px;
+}
+
+#btnScrollTop{
+  display: none !important;
+}
+
+.marca__punto{
+  width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:999px;
+  font-size:18px;
+  line-height:1;
+
+  background: rgba(255,255,255,.14);
+  border: 1px solid var(--borde);
+
+  flex-shrink:0;
+}
+
+@keyframes tiburonFlota {
+  0%   { transform: translateY(0) rotate(0deg); }
+  50%  { transform: translateY(-3px) rotate(-6deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.marca__punto{
+  animation: tiburonFlota 3.2s ease-in-out infinite;
+}
+
+.marca__punto{
+  animation: none;
+  transition: transform .3s ease;
+}
+
+.marca:hover .marca__punto{
+  animation: tiburonFlota 1.8s ease-in-out infinite;
+}
+
